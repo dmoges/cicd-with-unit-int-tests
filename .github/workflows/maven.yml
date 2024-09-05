@@ -27,20 +27,18 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Test with maven
-      run: mvn test
-      
-    - name: Build with Maven
+
+    - name: Build, test and install (add to local mvn repo) with Maven
       run: mvn clean install
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+    #- name: Update dependency graph
+    #  uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
     
     - name: Build and push Docker image (user name / password for docker set in GitHub under settings/secretes)
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: dmdocker01/springboot-cicd-test-images-new
+        image: dmdocker01/springboot-cicd-unit-int-test-image
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
