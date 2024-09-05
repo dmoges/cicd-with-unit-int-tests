@@ -27,11 +27,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        
-    - name: Test with maven
-      run: mvn test
 
-    - name: Build with Maven
+    - name: Build, test and install (add to local mvn repo) with Maven
       run: mvn clean install
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
