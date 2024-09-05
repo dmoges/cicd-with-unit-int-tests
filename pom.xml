@@ -95,6 +95,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+		<finalName>springboot-cicd-unit-int-test-image</finalName>
     </build>
 
 </project>
