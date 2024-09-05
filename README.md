@@ -18,3 +18,21 @@ The UnitTestClass in the src/test/java directory contains unit tests for the rel
 
 ### Integration Tests
 The IntegrationTestClass in the src/test/java directory contains integration tests for the relevant Java class. These tests verify that different classes interact correctly.
+
+
+### Sonarquebe in Docker
+username: admin
+password: sonarAdmin
+
+localhost:9000
+
+
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=Unit-and-Integration-Sping-boot-testing \
+  -Dsonar.projectName='Unit-and-Integration-Sping-boot-testing' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_47de997dfb90268ca73ea54a89664ed67f3f52f1
+
+
+
+mvn clean verify sonar:sonar -Dsonar.projectKey=Unit-and-Integration-Sping-boot-testing -Dsonar.projectName='Unit-and-Integration-Sping-boot-testing'  -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_47de997dfb90268ca73ea54a89664ed67f3f52f1
