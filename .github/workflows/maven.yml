@@ -40,7 +40,7 @@ jobs:
     - name: Build and push Docker image (user name / password for docker set in GitHub under settings/secretes)
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: dmdocker01/springboot-cicd-test-images-new
+        image: dmdocker01/springboot-cicd-unit-int-test-image
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
