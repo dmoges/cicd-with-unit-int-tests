@@ -79,4 +79,11 @@ docu of the workflow for maven project:
 https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/adding-analysis-to-github-actions-workflow/
 
 
+### running sonarscanner from a command line using maven
+
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=maven-test-project \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=squ_a13943edb64163c3345111fc5ce74831655e8c0c
+
 
