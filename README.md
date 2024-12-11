@@ -53,7 +53,24 @@ squ_a13943edb64163c3345111fc5ce74831655e8c0c
 
 SONAR_HOST_URL:
 
-http://192.168.1.8:9000/
+GitHub is going to connect to the SonarQube which is installed on the local machine. So a public ip-address
+should be generated using ngrok.
+
+C:\Users\dmoges\AppData\Roaming\ngrok-v3-stable-windows-amd64
+Go to the site and copy the command required to generate authtoken.
+
+https://dashboard.ngrok.com/get-started/setup/windows
+
+
+run the command wich is copied from the site mentioned above:
+
+ngrok config add-authtoken 
+
+then enter the command below:
+
+ngrok http http://192.168.1.8:9000
+
+copy the generated value for the SONAR_HOST_URL 
 
 ### Configure the workflow YAML file
 
