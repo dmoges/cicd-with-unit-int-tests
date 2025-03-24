@@ -7,7 +7,6 @@ import java.util.Optional;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -63,16 +62,15 @@ class UserRepositoryIntegrationTest {
     void givenUserEntity_whenSaveUser_thenUserIsPersisted() {
         // given
         User user = new User()
-                .setId(11L)
                 .setUserName("user")
                 .setPassword("password")
-                .setEmail("email1");
+                .setEmail("email2");
 
         // when
         userRepository.save(user);
 
         // then
-        Optional<User> retrievedUser = userRepository.findByEmail("email1");
+        Optional<User> retrievedUser = userRepository.findByEmail("email2");
         assertTrue(retrievedUser.isPresent());
         assertEquals("user", retrievedUser.get().getUserName());
     }
