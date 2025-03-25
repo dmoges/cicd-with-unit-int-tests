@@ -1,6 +1,6 @@
 services:
   sonarqube:
-    image: sonarqube:lts
+    image: sonarqube:25.2.0.102705-community
     container_name: sonarqube
     ports:
       - "9000:9000"  # SonarQube web UI
@@ -14,4 +14,4 @@ networks:
     driver: bridge
 
 volumes:
-  jenkins_home:
+  sonar_qube_home:

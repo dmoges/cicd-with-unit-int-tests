@@ -51,7 +51,7 @@ jobs:
     - name: Build and analyze
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+       # SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
     - name: Build and push Docker image (user name / password for docker set in GitHub under settings/secretes)
       uses: mr-smithers-excellent/docker-build-push@v5

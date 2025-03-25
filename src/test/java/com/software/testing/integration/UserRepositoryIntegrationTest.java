@@ -50,6 +50,7 @@ class UserRepositoryIntegrationTest {
 
     @AfterAll
     static void afterAll() {
+        postgres.close();
         postgres.stop();
     }
 
