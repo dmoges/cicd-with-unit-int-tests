@@ -29,7 +29,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    # sonarqube workflow
     - name: Cache SoanrQube packages
       uses: actions/cache@v4
       with:
