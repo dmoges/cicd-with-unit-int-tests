@@ -33,6 +33,9 @@ jobs:
       run: mvn clean install
     - name: Dependency Check
       uses: dependency-check/Dependency-Check_Action@main
+      env:
+        # actions/setup-java@v1 changes JAVA_HOME so it needs to be reset to mach the depcheck image
+        JAVA_HOME: /opt/jdk
       id: Depcheck
       with:
         project: 'test'
