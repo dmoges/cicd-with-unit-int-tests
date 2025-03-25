@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: SonarQube Analysis
+name: Dependency Check Analysis
 
 on:
   push:
