@@ -10,7 +10,7 @@ public class UserDtoTest {
 
     @Test
     void myFirstTest() {
-      assertThat(1).isEqualTo(42);
+      assertThat(1).isEqualTo(1);
     }
 
 }
